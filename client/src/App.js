@@ -7,7 +7,7 @@ import Posts from './components/Posts/Posts';
 import useStyles from './styles'
 import { getPosts } from './actions/posts'
 
-import memories from "./images/memories.JPG"
+import memories from "./images/clipart3178822.png"
 
 
 function App() {
@@ -23,8 +23,8 @@ function App() {
   return (
     <Container maxWidth="lg">
         <AppBar className={classes.appBar} position="static" color="inherit">
-          <Typography className={classes.heading} variant="h2" align="center">My Photos App By Abdelhafid El Bekkaoui</Typography>
-          <img className={classes.image} src={memories} alt="memories" height="60"></img>
+        <img className={classes.image} src={memories} alt="memories" height="60"></img>
+          <Typography className={classes.heading} variant="h2" align="center">Memories</Typography>
         </AppBar>
         <Grow in>
           <Container>
