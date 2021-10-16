@@ -36,3 +36,21 @@ export const updatePosts = async (req, res) => {
     res.json(updatePost);
 
 }
+
+export const deletePosts = async (req, res) => {
+    const { id } = req.params
+    if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send("No Post with similar ID found")
+    await PostMessage.findByIdAndRemove(id)
+    console.log("DELETE TRIGGERED");
+    res.json("Post successfully Deleted");
+}
+
+export const likePost = async (req, res) => {
+    const { id } = req.params
+    if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send("No Post with similar ID found")
+
+    const post = await PostMessage.findById(id)
+    const updatedPost = await PostMessage.findByIdAndUpdate(id, {likeCount: post.likeCount + 1}, {new: true})
+
+    res.json(updatedPost)
+}
