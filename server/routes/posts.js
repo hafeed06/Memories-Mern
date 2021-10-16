@@ -4,8 +4,6 @@ import { getPosts, createPosts, updatePosts, deletePosts, likePost} from "../con
 const router = express.Router(); 
 
 router.get("/", getPosts)
-
-router.get("/", getPosts)
 router.post("/", createPosts)
 router.patch("/:id", updatePosts)
 router.delete("/:id", deletePosts)

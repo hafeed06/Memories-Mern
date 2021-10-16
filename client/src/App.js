@@ -19,7 +19,7 @@ function App() {
   const [currentId, setCurrentId] = useState(null)
 
   useEffect(() => {
-      dispatch(getPosts); 
+      dispatch(getPosts()); 
   }, [currentId, dispatch])
 
   return (
