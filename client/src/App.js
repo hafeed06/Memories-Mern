@@ -6,8 +6,7 @@ import Form from './components/Form/Form';
 import Posts from './components/Posts/Posts';
 import useStyles from './styles'
 import { getPosts } from './actions/posts'
-
-import memories from "./images/clipart3178822.png"
+import PhotoCameraBackIcon from "@material-ui/icons/PhotoFilter"
 // import { set } from 'mongoose';
 
 
@@ -24,9 +23,9 @@ function App() {
 
   return (
     <Container maxWidth="lg">
-        <AppBar className={classes.appBar} position="static" color="inherit">
-        <img className={classes.image} src={memories} alt="memories" height="60"></img>
-          <Typography className={classes.heading} variant="h2" align="center">Memories</Typography>
+        <AppBar className={classes.appBar} position="static">
+          <PhotoCameraBackIcon className={classes.photoIcon}/>
+          <Typography className={classes.heading} variant="h4" align="center" color="#ffffff">Memories</Typography>
         </AppBar>
         <Grow in>
           <Container>
