@@ -15,7 +15,7 @@ const Post = ( {post, setCurrentId} ) => {
     const classes = useStyles(); 
     const dispatch = useDispatch();
     return (
-        <Card className={classes.card}>
+        <Card variant="outlined" className={classes.card}>
             <CardMedia className={classes.media} image={post.selectedFile} title={post.title} />
             <div className={classes.overlay}>
                 <Typography variant="h6">{post.creator}</Typography>
